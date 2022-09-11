@@ -1,0 +1,12 @@
+<svg width="1764.16" height="533.89" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1">
+ <defs>
+  <linearGradient id="linear-gradient" x1="0.49999" y1="1.00431" x2="0.49999" y2="-0.00421">
+   <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+   <stop offset="1" stop-color="#dfdfdf" stop-opacity="0.8"/>
+  </linearGradient>
+ </defs>
+ <g>
+  <title>Layer 1</title>
+  <ellipse class="cls-1" cx="1157.08001" cy="1725.05001" rx="244.85" ry="886.5" fill="none" stroke-miterlimit="10" stroke-width="3px" stroke="url(#linear-gradient)" transform="rotate(-83.1 196.99 1151.14)" id="svg_1"/>
+ </g>
+</svg>
