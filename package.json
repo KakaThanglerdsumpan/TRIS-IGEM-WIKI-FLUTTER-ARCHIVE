@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
-    "build": "set NODE_OPTIONS=--openssl-legacy-provider && nuxt build",
-    "start": "set NODE_OPTIONS=--openssl-legacy-provider && nuxt start",
-    "generate": "set NODE_OPTIONS=--openssl-legacy-provider && nuxt generate",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
     "lint:js": "eslint --ext \".js,.ts,.vue\" --ignore-path .gitignore .",
     "lint:style": "stylelint \"**/*.{css,scss,sass,html,vue}\" --ignore-path .gitignore",
     "lint:prettier": "prettier --check .",
