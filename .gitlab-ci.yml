@@ -3,7 +3,7 @@ image: cirrusci/flutter:latest
 pages:
   stage: deploy
   script:
-    - flutter build web
+    - flutter build web --web-renderer html
     - echo -e "<script>(function () {document.write('<base href=\"' + document.location.pathname + '\" />');}());</script>\n$(cat build/web/index.html)" > build/web/index.html
     - cp -r build/web public
   artifacts:
