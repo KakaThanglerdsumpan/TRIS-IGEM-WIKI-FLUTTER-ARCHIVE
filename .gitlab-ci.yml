@@ -4,6 +4,7 @@ pages:
   stage: deploy
   script:
     - flutter build web --web-renderer html
+    - rm -rf canvaskit.wasm
     - echo -e "<script>(function () {document.write('<base href=\"' + document.location.pathname + '\" />');}());</script>\n$(cat build/web/index.html)" > build/web/index.html
     - cp -r build/web public
   artifacts:
