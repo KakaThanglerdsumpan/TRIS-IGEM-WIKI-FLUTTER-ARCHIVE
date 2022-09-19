@@ -19,9 +19,7 @@ class SideMenu extends StatelessWidget {
         padding: EdgeInsets.zero,
         children: [
           const SizedBox(
-            height: 64,
             child: DrawerHeader(
-              padding: EdgeInsets.zero,
               decoration: BoxDecoration(
                 color: Colors.indigo,
               ),
