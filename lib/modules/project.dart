@@ -69,7 +69,7 @@ class Project extends StatelessWidget {
             child: SizedBox(
                 height: 400,
                 width: 800,
-                child: Image.asset(imageSource, fit: BoxFit.cover))),
+                child: Image.network(imageSource, fit: BoxFit.cover))),
         const SizedBox(height: 20),
         SelectableText(
           description,

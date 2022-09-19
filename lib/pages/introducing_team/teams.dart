@@ -22,8 +22,8 @@ class TeamsPage extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Image.asset(
-                'images/tmp.png',
+              Image.network(
+                'https://static.igem.wiki/teams/4314/wiki/tmp.png',
               ),
               SizedBox(
                 width: MediaQuery.of(context).size.width / 2,
@@ -37,8 +37,8 @@ class TeamsPage extends StatelessWidget {
                       ),
                     ),
                     Stack(alignment: AlignmentDirectional.centerEnd, children: [
-                      Image.asset(
-                        'images/blob.png',
+                      Image.network(
+                        'https://static.igem.wiki/teams/4314/wiki/tmp.png',
                       ),
                       SizedBox(
                         width: MediaQuery.of(context).size.width * 3 / 8,
@@ -138,8 +138,8 @@ class TeamsPage extends StatelessWidget {
                       ),
                       Row(
                         children: [
-                          Image.asset(
-                            'images/tmp.png',
+                          Image.network(
+                            'https://static.igem.wiki/teams/4314/wiki/tmp.png',
                             width: MediaQuery.of(context).size.width / 6,
                           ),
                           const SizedBox(
@@ -187,8 +187,8 @@ class TeamsPage extends StatelessWidget {
                                   fontFamily: 'helvetica', fontSize: 12),
                             ),
                           ),
-                          Image.asset(
-                            'images/tmp.png',
+                          Image.network(
+                            'https://static.igem.wiki/teams/4314/wiki/tmp.png',
                             width: MediaQuery.of(context).size.width / 6,
                           ),
                         ],

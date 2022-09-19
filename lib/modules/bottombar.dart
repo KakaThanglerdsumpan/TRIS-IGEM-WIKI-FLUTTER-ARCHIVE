@@ -36,8 +36,8 @@ class BottomBar extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 10),
-            Image.asset(
-              'images/sponsor.png',
+            Image.network(
+              'https://static.igem.wiki/teams/4314/wiki/sponsor.png',
               height: MediaQuery.of(context).size.width <= 425 ? 50 : 70,
             )
           ],

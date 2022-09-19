@@ -26,8 +26,8 @@ class TitleScreen extends StatelessWidget {
           alignment: AlignmentDirectional.centerStart,
           children: [
             Center(
-                child: SvgPicture.asset(
-              'images/silverOval.svg',
+                child: SvgPicture.network(
+              'https://static.igem.wiki/teams/4314/wiki/silveroval.svg',
               width: unitWidthValue * ovalMultiplier + 10,
             )),
             Center(
