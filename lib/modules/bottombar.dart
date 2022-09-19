@@ -16,7 +16,7 @@ class BottomBar extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: const [
-                Text(
+                SelectableText(
                   'Contact us',
                   style: TextStyle(
                     fontSize: 20,
@@ -26,7 +26,7 @@ class BottomBar extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 5),
-                Text(
+                SelectableText(
                   'Email: IGEM2022RIS@gmail.com\nInstagram: tris.igem22\nYoutube: TRIS IGEM',
                   style: TextStyle(
                     fontFamily: 'helvetica',
