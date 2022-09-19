@@ -18,7 +18,9 @@ class TitleScreen extends StatelessWidget {
         SizedBox(
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height - 80,
-          child: SvgPicture.asset('images/gradient.svg', fit: BoxFit.cover),
+          child: SvgPicture.network(
+              'https://static.igem.wiki/teams/4314/wiki/gradient.svg',
+              fit: BoxFit.cover),
         ),
         Stack(
           alignment: AlignmentDirectional.centerStart,
