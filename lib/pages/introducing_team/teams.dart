@@ -37,23 +37,29 @@ class TeamsPage extends StatelessWidget {
                         color: Color(0xff6987c9),
                       ),
                     ),
-                    Stack(alignment: AlignmentDirectional.centerEnd, children: [
-                      Image.network(
-                        'https://static.igem.wiki/teams/4314/wiki/blob.png',
-                      ),
-                      SizedBox(
-                        width: MediaQuery.of(context).size.width * 3 / 8,
-                        child: const Flexible(
-                          child: Text(
-                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisis gravida neque convallis a. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper. Faucibus nisl tincidunt eget nullam non nisi est sit. Mattis vulputate enim nulla aliquet. ',
-                            style: TextStyle(
-                                fontFamily: 'Helvetica',
-                                color: Colors.white,
-                                fontSize: 18),
+                    Stack(
+                      alignment: AlignmentDirectional.centerEnd,
+                      children: [
+                        SizedBox(
+                          height: 410,
+                          child: Image.network(
+                            'https://static.igem.wiki/teams/4314/wiki/blob.png',
                           ),
                         ),
-                      ),
-                    ]),
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width * 3 / 8,
+                          child: const Flexible(
+                            child: Text(
+                              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisis gravida neque convallis a. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper. Faucibus nisl tincidunt eget nullam non nisi est sit. Mattis vulputate enim nulla aliquet. ',
+                              style: TextStyle(
+                                  fontFamily: 'Helvetica',
+                                  color: Colors.white,
+                                  fontSize: 18),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ],
                 ),
               ),
