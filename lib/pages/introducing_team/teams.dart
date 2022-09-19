@@ -38,7 +38,7 @@ class TeamsPage extends StatelessWidget {
                     ),
                     Stack(alignment: AlignmentDirectional.centerEnd, children: [
                       Image.network(
-                        'https://static.igem.wiki/teams/4314/wiki/tmp.png',
+                        'https://static.igem.wiki/teams/4314/wiki/blob.png',
                       ),
                       SizedBox(
                         width: MediaQuery.of(context).size.width * 3 / 8,
