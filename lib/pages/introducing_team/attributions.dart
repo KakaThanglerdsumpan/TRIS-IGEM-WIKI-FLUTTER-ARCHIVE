@@ -30,7 +30,7 @@ class Attributions extends StatelessWidget {
               children: [
                 const HeaderContainer(text: 'OUR TEAM'),
                 const SizedBox(height: 30),
-                Text(
+                SelectableText(
                   "Everyone's name",
                   style: TextStyle(
                     fontFamily: 'helvetica',
@@ -44,7 +44,7 @@ class Attributions extends StatelessWidget {
                 const SizedBox(height: 80),
 
                 //------------------------------WETLAB----------------------------
-                Text(
+                SelectableText(
                   "WETLAB",
                   style: TextStyle(
                     color: const Color(0xff6987c9),
@@ -56,7 +56,7 @@ class Attributions extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 30),
-                Text(
+                SelectableText(
                   "Everyone's name",
                   style: TextStyle(
                     fontFamily: 'helvetica',
@@ -70,7 +70,7 @@ class Attributions extends StatelessWidget {
                 const SizedBox(height: 80),
 
                 //------------------------------DRYLAB----------------------------
-                Text(
+                SelectableText(
                   "DRYLAB",
                   style: TextStyle(
                     color: const Color(0xff6987c9),
@@ -82,7 +82,7 @@ class Attributions extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 30),
-                Text(
+                SelectableText(
                   "Everyone's name",
                   style: TextStyle(
                     fontFamily: 'helvetica',
@@ -96,7 +96,7 @@ class Attributions extends StatelessWidget {
                 const SizedBox(height: 80),
 
                 //------------------------------SUBTEAMS---------------------------
-                Text(
+                SelectableText(
                   "SUBTEAMS",
                   style: TextStyle(
                     color: const Color(0xff6987c9),
@@ -114,7 +114,7 @@ class Attributions extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         //------------------------------COLLABORATIONS---------------------------
-                        Text(
+                        SelectableText(
                           "COLLABORATIONS",
                           style: TextStyle(
                             color: const Color(0xff6987c9),
@@ -126,7 +126,7 @@ class Attributions extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(height: 30),
-                        Text(
+                        SelectableText(
                           "Everyone's name",
                           style: TextStyle(
                             fontFamily: 'helvetica',
@@ -140,7 +140,7 @@ class Attributions extends StatelessWidget {
                         const SizedBox(height: 80),
 
                         //------------------------------WIKI---------------------------
-                        Text(
+                        SelectableText(
                           "WIKI",
                           style: TextStyle(
                             color: const Color(0xff6987c9),
@@ -152,7 +152,7 @@ class Attributions extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(height: 30),
-                        Text(
+                        SelectableText(
                           "Everyone's name",
                           style: TextStyle(
                             fontFamily: 'helvetica',
@@ -166,7 +166,7 @@ class Attributions extends StatelessWidget {
                         const SizedBox(height: 80),
 
                         //------------------------------WIKI VOLUNTEERS---------------------------
-                        Text(
+                        SelectableText(
                           "WIKI VOLUNTEERS",
                           style: TextStyle(
                             color: const Color(0xff6987c9),
@@ -178,7 +178,7 @@ class Attributions extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(height: 30),
-                        Text(
+                        SelectableText(
                           "Everyone's name",
                           style: TextStyle(
                             fontFamily: 'helvetica',
@@ -195,7 +195,7 @@ class Attributions extends StatelessWidget {
                 const SizedBox(height: 80),
 
                 //------------------------------SUPPORT----------------------------
-                Text(
+                SelectableText(
                   "SUPPORT",
                   style: TextStyle(
                     color: const Color(0xff6987c9),
@@ -207,7 +207,7 @@ class Attributions extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 30),
-                Text(
+                SelectableText(
                   "Everyone's name",
                   style: TextStyle(
                     fontFamily: 'helvetica',

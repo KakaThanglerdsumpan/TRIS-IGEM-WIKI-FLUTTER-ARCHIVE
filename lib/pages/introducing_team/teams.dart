@@ -30,7 +30,7 @@ class TeamsPage extends StatelessWidget {
                 width: MediaQuery.of(context).size.width / 2,
                 child: Column(
                   children: [
-                    const Text(
+                    const SelectableText(
                       'INTRODUCING THE TEAM',
                       style: TextStyle(
                         fontSize: 36,
@@ -49,7 +49,7 @@ class TeamsPage extends StatelessWidget {
                         SizedBox(
                           width: MediaQuery.of(context).size.width * 3 / 8,
                           child: const Flexible(
-                            child: Text(
+                            child: SelectableText(
                               'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisis gravida neque convallis a. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper. Faucibus nisl tincidunt eget nullam non nisi est sit. Mattis vulputate enim nulla aliquet. ',
                               style: TextStyle(
                                   fontFamily: 'Helvetica',
@@ -82,7 +82,7 @@ class TeamsPage extends StatelessWidget {
                       topRight: Radius.circular(50),
                       bottomRight: Radius.circular(50),
                     )),
-                child: Text(
+                child: SelectableText(
                   'TEAM MEMBERS',
                   style: TextStyle(
                       fontSize: MediaQuery.of(context).size.width <= 900
@@ -129,14 +129,14 @@ class TeamsPage extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text(
+                      const SelectableText(
                         'NAME',
                         style: TextStyle(
                           color: Color(0xff6987c9),
                           fontSize: 20,
                         ),
                       ),
-                      const Text(
+                      const SelectableText(
                         'TEAM/POSITION',
                         style: TextStyle(
                           color: Color(0xff6987c9),
@@ -170,14 +170,14 @@ class TeamsPage extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
-                      const Text(
+                      const SelectableText(
                         'NAME',
                         style: TextStyle(
                           color: Color(0xff6987c9),
                           fontSize: 20,
                         ),
                       ),
-                      const Text(
+                      const SelectableText(
                         'TEAM/POSITION',
                         style: TextStyle(
                           color: Color(0xff6987c9),
