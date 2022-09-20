@@ -3,7 +3,6 @@ image: cirrusci/flutter:latest
 pages:
   stage: deploy
   script:
-    - docker image prune
     - flutter build web --web-renderer html
     - echo -e "<script>(function () {document.write('<base href=\"' + document.location.pathname + '\" />');}());</script>\n$(cat build/web/index.html)" > build/web/index.html
     - rm -rf build/web/canvaskit
