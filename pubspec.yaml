@@ -1,6 +1,6 @@
 name: homeprojectpageflutter
 description: Thailand_RIS-IGEM-Wiki
-publish_to: 'none'
+publish_to: "none"
 version: 1.0.0+1
 environment:
   sdk: ">=2.17.6 <3.0.0"
@@ -11,11 +11,12 @@ dependencies:
   flutter_native_splash: ^2.2.8
   flutter_web_plugins:
     sdk: flutter
+  go_router: ^5.0.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
-  
+
 flutter:
   uses-material-design: true
   # assets:

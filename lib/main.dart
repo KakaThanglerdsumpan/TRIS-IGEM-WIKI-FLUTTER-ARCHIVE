@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import './home/index.dart';
 import './project/index.dart';
 import './url_strategy/configure_nonweb.dart'
@@ -6,20 +7,33 @@ import './url_strategy/configure_nonweb.dart'
 
 void main() {
   configureApp();
-  runApp(const myApp());
+  runApp(myApp());
 }
 
 class myApp extends StatelessWidget {
-  const myApp({Key? key}) : super(key: key);
+  myApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      initialRoute: '/',
-      routes: {
-        '/': (context) => home(),
-        '/projects': (context) => project(),
-      },
+    return MaterialApp.router(
+      routerConfig: _router,
+      title: 'GoRouter Example',
     );
   }
+  final GoRouter _router = GoRouter(
+    routes: <GoRoute>[
+      GoRoute(
+        path: '/',
+        builder: (BuildContext context, GoRouterState state) {
+          return home();
+        },
+      ),
+      GoRoute(
+        path: '/projects',
+        builder: (BuildContext context, GoRouterState state) {
+          return project();
+        },
+      ),
+    ],
+  ); 
 }
