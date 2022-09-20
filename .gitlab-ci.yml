@@ -39,6 +39,11 @@ stages:
 #script:
 #- docker image prune -a
 #    - docker system prune -a
+#
+
+cache:
+  paths:
+    - $CI_PROJECT_DIR/.pub-cache/
 
 pages:
   stage: deploy
@@ -46,6 +51,8 @@ pages:
   before_script:
     - rm -rf ios/ linux/ macos/ windows/ android/
     - flutter pub get
+    - export PUB_CACHE=$CI_PROJECT_DIR/.pub-cache
+    - export PATH="$PATH":"$PUB_CACHE/bin"
   script:
     - flutter build web --web-renderer html
     - echo -e "<script>(function () {document.write('<base href=\"' + document.location.pathname + '\" />');}());</script>\n$(cat build/web/index.html)" > build/web/index.html
