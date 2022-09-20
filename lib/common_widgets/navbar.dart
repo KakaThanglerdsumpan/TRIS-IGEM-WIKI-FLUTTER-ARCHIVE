@@ -105,7 +105,7 @@ class navBar extends StatelessWidget implements PreferredSizeWidget {
                       const SizedBox(width: 75),
                       TextButton(
                           onPressed: () {
-                            Navigator.of(context).pushNamed('/parts');
+                            Navigator.of(context).pushNamed('/');
                           },
                           child: const Text('PARTS',
                               style: TextStyle(
