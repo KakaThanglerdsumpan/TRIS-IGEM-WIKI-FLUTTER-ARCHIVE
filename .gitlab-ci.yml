@@ -43,7 +43,8 @@ stages:
 pages:
   stage: deploy
   image: "cirrusci/flutter:latest"
-  before_script: 
+  before_script:
+    - rm -rf ios/ linux/ macos/ windows/ android/
     - flutter pub get
   script:
     - flutter build web --web-renderer html
@@ -55,4 +56,3 @@ pages:
       - public
   only:
     - main
-
