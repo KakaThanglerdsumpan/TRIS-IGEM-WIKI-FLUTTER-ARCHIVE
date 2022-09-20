@@ -1,6 +1,6 @@
 stages:
   # - test
-  # - dockerClean
+  - dockerClean
   - deploy
 
 # code_quality:
@@ -34,11 +34,11 @@ stages:
 #       junit: report.xml
 
 # no need for dockerCleaner anymore
-# dockerCleaner:
-#   stage: dockerClean
-#   script:
-#     - docker image prune -a
-#     - docker system prune -a
+dockerCleaner:
+  stage: dockerClean
+  script:
+    - docker image prune -a
+    - docker system prune -a
 
 pages:
   stage: deploy
