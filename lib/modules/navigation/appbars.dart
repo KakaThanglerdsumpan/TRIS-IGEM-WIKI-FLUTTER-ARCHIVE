@@ -59,10 +59,18 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
                     children: [
                       NavBarDDButton(
                         title: 'TEAMS',
+                        alignment: 'right',
                         subpages: Column(
+                          crossAxisAlignment: CrossAxisAlignment.end,
                           children: const [
-                            NavBarTile(pageName: 'teams'),
-                            NavBarTile(pageName: 'attributions')
+                            NavBarTile(
+                              pageName: 'teams',
+                              alignment: 'right',
+                            ),
+                            NavBarTile(
+                              pageName: 'attributions',
+                              alignment: 'right',
+                            )
                           ],
                         ),
                       ),

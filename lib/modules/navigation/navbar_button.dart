@@ -25,13 +25,19 @@ class NavBarButton extends StatelessWidget {
 class NavBarDDButton extends StatelessWidget {
   final String title;
   final Widget subpages;
-  const NavBarDDButton({required this.title, required this.subpages, Key? key})
+  final String alignment;
+  const NavBarDDButton(
+      {required this.title,
+      required this.subpages,
+      this.alignment = 'left',
+      Key? key})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton(
-      offset: const Offset(-15, 20),
+      offset:
+          alignment == 'right' ? const Offset(15, 20) : const Offset(-15, 20),
       elevation: 0,
       position: PopupMenuPosition.under,
       itemBuilder: (context) => [
@@ -57,13 +63,16 @@ class NavBarDDButton extends StatelessWidget {
 
 class NavBarTile extends StatelessWidget {
   final String pageName;
-  const NavBarTile({required this.pageName, Key? key}) : super(key: key);
+  final String alignment;
+  const NavBarTile({required this.pageName, this.alignment = 'left', Key? key})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
       title: Text(
         pageName.toUpperCase(),
+        textAlign: alignment == 'right' ? TextAlign.right : TextAlign.left,
       ),
       onTap: () {
         Navigator.of(context)
