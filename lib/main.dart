@@ -1,8 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:igem/modules/appbars.dart';
-import 'package:igem/modules/sidemenu.dart';
+import 'package:igem/configure_url.dart';
+import 'package:igem/pages/drylabs/drylab_notebook.dart';
+import 'package:igem/pages/drylabs/modeling.dart';
+import 'package:igem/pages/introducing_team/attributions.dart';
+import 'package:igem/pages/introducing_team/teams.dart';
+import 'package:igem/pages/wetlabs/experiments.dart';
+import 'package:igem/pages/wetlabs/measurement.dart';
+import 'package:igem/pages/wetlabs/notebook.dart';
+import 'package:igem/pages/wetlabs/results.dart';
+
+import 'pages/collab/collab.dart';
+import 'pages/home/home.dart';
+import 'pages/wetlabs/safety.dart';
 
 void main() {
+  configureApp();
   runApp(const MyApp());
 }
 
@@ -14,72 +26,22 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       // Remove the debug banner
       debugShowCheckedModeBanner: false,
-      title: 'igem.com',
+      title: 'Thailand_RIS',
       theme: ThemeData(fontFamily: 'DrukWide'),
-      home: const HomePage(),
-    );
-  }
-}
-
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      decoration: const BoxDecoration(
-          gradient: LinearGradient(
-              begin: Alignment.bottomRight,
-              end: Alignment.topLeft,
-              colors: [Colors.white, Colors.indigo])),
-      child: SafeArea(
-        child: Scaffold(
-          appBar: const MyAppBar(),
-          drawer: const SideMenu(),
-          backgroundColor: Colors.transparent,
-          body: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 100),
-            child: Align(
-              alignment: Alignment.center,
-              child: Row(children: [
-                Container(
-                  width: 500,
-                  height: 500,
-                  decoration: const BoxDecoration(
-                    shape: BoxShape.circle,
-                    gradient: LinearGradient(
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                      colors: [
-                        Colors.white,
-                        Colors.indigo,
-                      ],
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  width: 150,
-                ),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Text(
-                        'THAILAND_RIS',
-                        style: TextStyle(fontSize: 50),
-                      ),
-                      SizedBox(
-                        height: 80,
-                      ),
-                    ],
-                  ),
-                )
-              ]),
-            ),
-          ),
-        ),
-      ),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const HomePage(),
+        '/collab': (context) => const Collab(),
+        '/modeling': (context) => const Modeling(),
+        '/drylabnotebook': (context) => const DrylabNotebook(),
+        '/experiments': (context) => const Experiments(),
+        '/measurement': (context) => const Measurement(),
+        '/notebook': (context) => const Notebook(),
+        '/results': (context) => const Results(),
+        '/safety': (context) => const Safety(),
+        '/teams': (context) => const TeamsPage(),
+        '/attributions': (context) => const Attributions(),
+      },
     );
   }
 }

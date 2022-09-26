@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:igem/modules/bottombar.dart';
-import 'package:igem/modules/appbars.dart';
+import 'package:igem/modules/navigation/appbars.dart';
 import 'package:igem/modules/headercontainer.dart';
-import 'package:igem/modules/sidemenu.dart';
+import 'package:igem/modules/navigation/sidemenu.dart';
 import 'package:igem/modules/titlescreen.dart';
 
 class Attributions extends StatelessWidget {
