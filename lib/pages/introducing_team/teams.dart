@@ -43,12 +43,10 @@ class TeamsPage extends StatelessWidget {
                         'https://static.igem.wiki/teams/4314/wiki/tmp.png',
                       ),
                       const SizedBox(
-                        child: Flexible(
-                          child: SelectableText(
-                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisis gravida neque convallis a. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper. Faucibus nisl tincidunt eget nullam non nisi est sit. Mattis vulputate enim nulla aliquet. Feugiat pretium nibh ipsum consequat nisl vel pretium. Augue mauris augue neque gravida in. Mi proin sed libero enim sed faucibus turpis. Tellus pellentesque eu tincidunt tortor aliquam nulla facilisi. Sed felis eget velit aliquet sagittis id. Adipiscing elit ut aliquam purus sit amet luctus venenatis. Tincidunt dui ut ornare lectus sit amet. Elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi. Mi eget mauris pharetra et ultrices neque ornare.',
-                            style: TextStyle(
-                                fontFamily: 'Helvetica', fontSize: 12),
-                          ),
+                        child: SelectableText(
+                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisis gravida neque convallis a. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper. Faucibus nisl tincidunt eget nullam non nisi est sit. Mattis vulputate enim nulla aliquet. Feugiat pretium nibh ipsum consequat nisl vel pretium. Augue mauris augue neque gravida in. Mi proin sed libero enim sed faucibus turpis. Tellus pellentesque eu tincidunt tortor aliquam nulla facilisi. Sed felis eget velit aliquet sagittis id. Adipiscing elit ut aliquam purus sit amet luctus venenatis. Tincidunt dui ut ornare lectus sit amet. Elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi. Mi eget mauris pharetra et ultrices neque ornare.',
+                          style:
+                              TextStyle(fontFamily: 'Helvetica', fontSize: 12),
                         ),
                       ),
                       const SizedBox(height: 20)
@@ -80,18 +78,16 @@ class TeamsPage extends StatelessWidget {
                               width: MediaQuery.of(context).size.width / 2,
                               'https://static.igem.wiki/teams/4314/wiki/blob.png',
                             ),
-                            // SizedBox(
-                            //   width: MediaQuery.of(context).size.width * 3 / 8,
-                            //   child: const Flexible(
-                            //     child: SelectableText(
-                            //       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisis gravida neque convallis a. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper. Faucibus nisl tincidunt eget nullam non nisi est sit. Mattis vulputate enim nulla aliquet. ',
-                            //       style: TextStyle(
-                            //           fontFamily: 'Helvetica',
-                            //           color: Colors.white,
-                            //           fontSize: 18),
-                            //     ),
-                            //   ),
-                            // ),
+                            SizedBox(
+                              width: MediaQuery.of(context).size.width * 3 / 8,
+                              child: const SelectableText(
+                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisis gravida neque convallis a. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper. Faucibus nisl tincidunt eget nullam non nisi est sit. Mattis vulputate enim nulla aliquet. ',
+                                style: TextStyle(
+                                    fontFamily: 'Helvetica',
+                                    color: Colors.white,
+                                    fontSize: 18),
+                              ),
+                            ),
                           ],
                         ),
                         const SizedBox(
