@@ -15,7 +15,7 @@ class navBar extends StatelessWidget implements PreferredSizeWidget {
             backgroundColor: Colors.white,
             centerTitle: false,
             title: const Text("THAILAND_RIS",
-                style: TextStyle(color: Color(0xff303f7b))),
+                style: TextStyle(color: Color(0xff303f7b), fontFamily: 'druk')),
           )
         : AppBar(
             automaticallyImplyLeading: false,
@@ -33,9 +33,9 @@ class navBar extends StatelessWidget implements PreferredSizeWidget {
                           },
                           child: const Text('HOME',
                               style: TextStyle(
-                                color: Color(0xff303f7b),
-                                fontSize: 20,
-                              ))),
+                                  color: Color(0xff303f7b),
+                                  fontSize: 20,
+                                  fontFamily: 'druk'))),
                       const SizedBox(width: 75),
                       PopupMenuButton(
                           offset: const Offset(-15, 20),
@@ -50,6 +50,8 @@ class navBar extends StatelessWidget implements PreferredSizeWidget {
                                         ListTile(
                                           title: const Text(
                                             'INDEX',
+                                            style:
+                                                TextStyle(fontFamily: 'druk'),
                                           ),
                                           onTap: () {
                                             // TODO: noot fullly working
@@ -60,30 +62,40 @@ class navBar extends StatelessWidget implements PreferredSizeWidget {
                                         ListTile(
                                           title: const Text(
                                             'EXPERIMENTS',
+                                            style:
+                                                TextStyle(fontFamily: 'druk'),
                                           ),
                                           onTap: () {},
                                         ),
                                         ListTile(
                                           title: const Text(
                                             'MEASUREMENT',
+                                            style:
+                                                TextStyle(fontFamily: 'druk'),
                                           ),
                                           onTap: () {},
                                         ),
                                         ListTile(
                                           title: const Text(
                                             'NOTEBOOK',
+                                            style:
+                                                TextStyle(fontFamily: 'druk'),
                                           ),
                                           onTap: () {},
                                         ),
                                         ListTile(
                                           title: const Text(
                                             'RESULTS',
+                                            style:
+                                                TextStyle(fontFamily: 'druk'),
                                           ),
                                           onTap: () {},
                                         ),
                                         ListTile(
                                           title: const Text(
                                             'SAFETY',
+                                            style:
+                                                TextStyle(fontFamily: 'druk'),
                                           ),
                                           onTap: () {},
                                         ),
@@ -95,9 +107,9 @@ class navBar extends StatelessWidget implements PreferredSizeWidget {
                           child: const Text(
                             'PROJECT',
                             style: TextStyle(
-                              color: Color(0xff303f7b),
-                              fontSize: 20,
-                            ),
+                                color: Color(0xff303f7b),
+                                fontSize: 20,
+                                fontFamily: 'druk'),
                           )),
                       const SizedBox(width: 75),
                       TextButton(
@@ -106,9 +118,9 @@ class navBar extends StatelessWidget implements PreferredSizeWidget {
                           },
                           child: const Text('PARTS',
                               style: TextStyle(
-                                color: Color(0xff303f7b),
-                                fontSize: 20,
-                              ))),
+                                  color: Color(0xff303f7b),
+                                  fontSize: 20,
+                                  fontFamily: 'druk'))),
                     ]),
                     Row(
                       children: [
@@ -126,12 +138,16 @@ class navBar extends StatelessWidget implements PreferredSizeWidget {
                                               title: const Text(
                                                 'TEAMS',
                                                 textAlign: TextAlign.end,
+                                                style: TextStyle(
+                                                    fontFamily: 'druk'),
                                               ),
                                               onTap: () {}),
                                           ListTile(
                                               title: const Text(
                                                 'ATTRIBUTIONS',
                                                 textAlign: TextAlign.end,
+                                                style: TextStyle(
+                                                    fontFamily: 'druk'),
                                               ),
                                               onTap: () {}),
                                         ],
@@ -151,17 +167,17 @@ class navBar extends StatelessWidget implements PreferredSizeWidget {
                             onPressed: () {},
                             child: const Text('HP',
                                 style: TextStyle(
-                                  color: Color(0xff303f7b),
-                                  fontSize: 20,
-                                ))),
+                                    color: Color(0xff303f7b),
+                                    fontSize: 20,
+                                    fontFamily: 'druk'))),
                         const SizedBox(width: 75),
                         TextButton(
                             onPressed: () {},
                             child: const Text('COLLAB',
                                 style: TextStyle(
-                                  color: Color(0xff303f7b),
-                                  fontSize: 20,
-                                ))),
+                                    color: Color(0xff303f7b),
+                                    fontSize: 20,
+                                    fontFamily: 'druk'))),
                       ],
                     ),
                   ]),

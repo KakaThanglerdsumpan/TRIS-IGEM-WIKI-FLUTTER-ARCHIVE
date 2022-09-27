@@ -1,6 +1,10 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import '../common_widgets/background.dart';
 
 class homeOne extends StatelessWidget {
   const homeOne({Key? key}) : super(key: key);
@@ -17,31 +21,16 @@ class homeOne extends StatelessWidget {
     double headerMultiplier = 15;
     double spaceMultiplier2 = 5;
     return Material(
-      child: Container(
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height - 80,
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment(0.8, 1),
-            colors: <Color>[
-              Color(0xff2132A6),
-              Color(0xff6987c9),
-              // Color.fromARGB(255, 125, 148, 199),
-              // Color.fromARGB(0, 255, 255, 255),
-              // Colors.indigo,
-              Colors.white
-            ], // Gradient from https://learnui.design/tools/gradient-generator.html
-            // tileMode: TileMode.mirror,
-          ),
-        ),
-        child: Column(
+        child: Stack(
+      alignment: Alignment.center,
+      children: <Widget>[
+        bg(),
+        SvgPicture.network(
+            'https://static.igem.wiki/teams/4314/wiki/silveroval.svg'),
+        Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            // SizedBox(
-            //   height: spaceMultiplier * unitWidthValue,
-            // ),
             SelectableText(
               'Thailand_RIS',
               style: TextStyle(
@@ -56,10 +45,14 @@ class homeOne extends StatelessWidget {
               "got routes to work. Go to /projects",
               style: TextStyle(
                   fontSize: 25, color: Colors.white, fontFamily: 'rockabye'),
+            ),
+            IconButton(
+              icon: FaIcon(FontAwesomeIcons.arrowDown),
+              onPressed: () {},
             )
           ],
         ),
-      ),
-    );
+      ],
+    ));
   }
 }
