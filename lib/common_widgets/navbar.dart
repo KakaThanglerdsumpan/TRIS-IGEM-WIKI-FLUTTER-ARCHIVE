@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class navBar extends StatelessWidget implements PreferredSizeWidget {
   const navBar({Key? key}) : super(key: key);
@@ -55,8 +56,8 @@ class navBar extends StatelessWidget implements PreferredSizeWidget {
                                           ),
                                           onTap: () {
                                             // TODO: noot fullly working
-                                            Navigator.of(context)
-                                                .pushNamed('/projects');
+                                            GoRouter.of(context)
+                                                .go('/projects');
                                           },
                                         ),
                                         ListTile(
@@ -139,6 +140,8 @@ class navBar extends StatelessWidget implements PreferredSizeWidget {
                                                 'TEAMS',
                                                 textAlign: TextAlign.end,
                                                 style: TextStyle(
+                                                    color: Color(0xff303f7b),
+                                                    fontSize: 20,
                                                     fontFamily: 'druk'),
                                               ),
                                               onTap: () {}),

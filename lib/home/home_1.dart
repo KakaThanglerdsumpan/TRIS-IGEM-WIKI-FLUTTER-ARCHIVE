@@ -20,34 +20,44 @@ class homeOne extends StatelessWidget {
     }
     double headerMultiplier = 15;
     double spaceMultiplier2 = 5;
+    double spaceMultiplier3 = 3;
     return Material(
         child: Stack(
       alignment: Alignment.center,
       children: <Widget>[
-        bg(),
+        const bg(),
         SvgPicture.network(
             'https://static.igem.wiki/teams/4314/wiki/silveroval.svg'),
         Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SelectableText(
-              'Thailand_RIS',
-              style: TextStyle(
-                  fontSize: headerMultiplier * unitWidthValue,
-                  color: Colors.white,
-                  fontFamily: 'rockabye'),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                SelectableText(
+                  'Thailand_RIS',
+                  style: TextStyle(
+                      fontSize: headerMultiplier * unitWidthValue,
+                      color: Colors.white,
+                      fontFamily: 'rockabye'),
+                ),
+                SizedBox(
+                  height: spaceMultiplier2 * unitWidthValue,
+                ),
+                const SelectableText(
+                  "got routes to work. Go to /projects",
+                  style: TextStyle(
+                      fontSize: 25,
+                      color: Colors.white,
+                      fontFamily: 'rockabye'),
+                ),
+              ],
             ),
             SizedBox(
-              height: spaceMultiplier2 * unitWidthValue,
-            ),
-            const SelectableText(
-              "got routes to work. Go to /projects",
-              style: TextStyle(
-                  fontSize: 25, color: Colors.white, fontFamily: 'rockabye'),
+              height: spaceMultiplier3 * unitWidthValue,
             ),
             IconButton(
-              icon: FaIcon(FontAwesomeIcons.arrowDown),
+              icon: const FaIcon(FontAwesomeIcons.arrowDown),
               onPressed: () {},
             )
           ],
