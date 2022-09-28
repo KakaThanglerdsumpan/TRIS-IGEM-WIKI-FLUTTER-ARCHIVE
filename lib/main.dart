@@ -1,39 +1,47 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import './home/index.dart';
-import './utils/configure_nonweb.dart'
-    if (dart.library.html) './utils/configure_web.dart';
+import 'configure_url.dart';
+import 'pages/drylab_notebook.dart';
+import 'pages/modeling.dart';
+import 'pages/attributions.dart';
+import 'pages/teams.dart';
+import 'pages/experiments.dart';
+import 'pages/measurement.dart';
+import 'pages/notebook.dart';
+import 'pages/results.dart';
+
+import 'pages/collab.dart';
+import 'pages/home.dart';
+import 'pages/safety.dart';
 
 void main() {
-  GoRouter.setUrlPathStrategy(UrlPathStrategy.path);
-  runApp(App());
+  configureApp();
+  runApp(const MyApp());
 }
 
-class App extends StatelessWidget {
-  App({Key? key}) : super(key: key);
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final GoRouter _router = GoRouter(
-      routes: <GoRoute>[
-        GoRoute(
-          path: '/',
-          builder: (BuildContext context, GoRouterState state) {
-            return home();
-          },
-        ),
-        GoRoute(
-          path: '/projects',
-          builder: (BuildContext context, GoRouterState state) {
-            return Material(
-              child: const Text("Hello Projects"),
-            );
-          },
-        ),
-      ],
-    );
-    return MaterialApp.router(
-      routerConfig: _router,
+    return MaterialApp(
+      // Remove the debug banner
+      debugShowCheckedModeBanner: false,
+      title: 'Thailand_RIS',
+      theme: ThemeData(fontFamily: 'DrukWide'),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const HomePage(),
+        '/collab': (context) => const Collab(),
+        '/modeling': (context) => const Modeling(),
+        '/drylabnotebook': (context) => const DrylabNotebook(),
+        '/experiments': (context) => const Experiments(),
+        '/measurement': (context) => const Measurement(),
+        '/notebook': (context) => const Notebook(),
+        '/results': (context) => const Results(),
+        '/safety': (context) => const Safety(),
+        '/teams': (context) => const TeamsPage(),
+        '/attributions': (context) => const Attributions(),
+      },
     );
   }
 }
