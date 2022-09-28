@@ -140,8 +140,6 @@ class navBar extends StatelessWidget implements PreferredSizeWidget {
                                                 'TEAMS',
                                                 textAlign: TextAlign.end,
                                                 style: TextStyle(
-                                                    color: Color(0xff303f7b),
-                                                    fontSize: 20,
                                                     fontFamily: 'druk'),
                                               ),
                                               onTap: () {}),
@@ -163,6 +161,7 @@ class navBar extends StatelessWidget implements PreferredSizeWidget {
                               style: TextStyle(
                                 color: Color(0xff303f7b),
                                 fontSize: 20,
+                                  fontFamily: 'druk'
                               ),
                             )),
                         const SizedBox(width: 75),
