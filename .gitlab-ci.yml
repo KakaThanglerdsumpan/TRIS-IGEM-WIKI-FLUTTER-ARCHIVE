@@ -1,60 +1,23 @@
 stages:
-  # - test
-  #  - dockerClean
   - deploy
-
-# code_quality:
-#   stage: test
-#   image: "cirrusci/flutter:latest"
-#   before_script:
-#     - pub global activate dart_code_metrics
-#     - export PATH="$PATH:$HOME/.pub-cache/bin"
-#   script:
-#     - metrics lib -r codeclimate  > gl-code-quality-report.json
-#   artifacts:
-#     reports:
-#       codequality: gl-code-quality-report.json
-
-# test:
-#   stage: test
-#   image: "cirrusci/flutter:latest"
-#   before_script:
-#     - pub global activate junitreport
-#     - export PATH="$PATH:$HOME/.pub-cache/bin"
-#   script:
-#     - flutter test --machine --coverage | tojunit -o report.xml
-#     - lcov --summary coverage/lcov.info
-#     - genhtml coverage/lcov.info --output=coverage
-#   coverage: '/lines\.*: \d+\.\d+\%/'
-#   artifacts:
-#     name: coverage
-#     paths:
-#       - $CI_PROJECT_DIR/coverage
-#     reports:
-#       junit: report.xml
-
-# no need for dockerCleaner anymore
-# dockerCleaner:
-#  stage: dockerClean
-#script:
-#- docker image prune -a
-#    - docker system prune -a
-#
 
 cache:
   paths:
     - $CI_PROJECT_DIR/.pub-cache/
 
-pages:
-  stage: deploy
-  image: "cirrusci/flutter:latest"
-  before_script:
+before_script:
+    - flutter config --enable-web
     - flutter pub get
     - export PUB_CACHE=$CI_PROJECT_DIR/.pub-cache
     - export PATH="$PATH":"$PUB_CACHE/bin"
+
+pages:
+  stage: deploy
+  image: "cirrusci/flutter:latest"
   script:
     - flutter build web --web-renderer html
     - echo -e "<script>(function () {document.write('<base href=\"' + document.location.pathname + '\" />');}());</script>\n$(cat build/web/index.html)" > build/web/index.html
+    - echo -e "<script>(function () {document.write('<base href=\"' + document.location.pathname + '\" />');}());</script>\n$(cat build/web/teams.html)" > build/web/teams.html
     - rm -rf build/web/canvaskit
     - cp -r build/web public
   artifacts:
