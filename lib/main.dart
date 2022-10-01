@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'configure_url.dart';
+import 'package:url_strategy/url_strategy.dart';
+// import 'configure_url.dart';
 import 'pages/drylab_notebook.dart';
 import 'pages/modeling.dart';
 import 'pages/attributions.dart';
@@ -14,7 +15,8 @@ import 'pages/home.dart';
 import 'pages/safety.dart';
 
 void main() {
-  configureApp();
+  setPathUrlStrategy();
+  // configureApp();
   runApp(const MyApp());
 }
 
