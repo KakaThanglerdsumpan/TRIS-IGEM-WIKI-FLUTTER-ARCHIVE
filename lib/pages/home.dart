@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:igem/modules/bottombar.dart';
 
 import '../modules/navigation/appbars.dart';
 import '../modules/navigation/sidemenu.dart';
@@ -19,47 +20,64 @@ class HomePage extends StatelessWidget {
           appBar: const MyAppBar(),
           drawer: const SideMenu(),
           backgroundColor: Colors.transparent,
-          body: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 100),
-            child: Align(
-              alignment: Alignment.center,
-              child: Row(children: [
-                Container(
-                  width: 500,
-                  height: 500,
-                  decoration: const BoxDecoration(
-                    shape: BoxShape.circle,
-                    gradient: LinearGradient(
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                      colors: [
-                        Colors.white,
-                        Colors.indigo,
+          body: ListView(children: [
+            Padding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 100, vertical: 50),
+              child: Align(
+                alignment: Alignment.center,
+                child: Column(children: [
+                  const Text(
+                    'THAILAND_RIS',
+                    style: TextStyle(
+                        fontSize: 80,
+                        fontFamily: 'Rockabye',
+                        color: Colors.white),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  const Text(
+                    'Simple Description',
+                    style: TextStyle(
+                        fontSize: 25,
+                        fontFamily: 'Helvetica',
+                        color: Colors.white),
+                  ),
+                  const SizedBox(
+                    height: 25,
+                  ),
+                  Container(
+                    width: 600,
+                    height: 600,
+                    decoration: BoxDecoration(
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.white.withOpacity(0.3),
+                            blurRadius: 5,
+                            offset: Offset(10, 0))
                       ],
+                      shape: BoxShape.circle,
+                      gradient: LinearGradient(
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                        colors: [
+                          Colors.white,
+                          Colors.indigo,
+                        ],
+                      ),
                     ),
+                    child: Image.network(
+                        'https://static.igem.wiki/teams/4314/wiki/igemlogotransparent.png'),
                   ),
-                ),
-                const SizedBox(
-                  width: 150,
-                ),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Text(
-                        'THAILAND_RIS',
-                        style: TextStyle(fontSize: 50),
-                      ),
-                      SizedBox(
-                        height: 80,
-                      ),
-                    ],
+                  const SizedBox(
+                    width: 150,
                   ),
-                )
-              ]),
+                ]),
+              ),
             ),
-          ),
+            BottomBar(),
+          ]),
         ),
       ),
     );
