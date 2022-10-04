@@ -6,10 +6,10 @@ cache:
     - $CI_PROJECT_DIR/.pub-cache/
 
 before_script:
-    - flutter config --enable-web
-    - flutter pub get
-    - export PUB_CACHE=$CI_PROJECT_DIR/.pub-cache
-    - export PATH="$PATH":"$PUB_CACHE/bin"
+  - flutter config --enable-web
+  - flutter pub get
+  - export PUB_CACHE=$CI_PROJECT_DIR/.pub-cache
+  - export PATH="$PATH":"$PUB_CACHE/bin"
 
 pages:
   stage: deploy
@@ -17,10 +17,11 @@ pages:
   script:
     - flutter build web --web-renderer html
     - echo -e "<script>(function () {document.write('<base href=\"' + document.location.pathname + '\" />');}());</script>\n$(cat build/web/index.html)" > build/web/index.html
-    - echo -e "<script>(function () {document.write('<base href=\"' + document.location.pathname + '\" />');}());</script>\n$(cat build/web/404.html)" > build/web/404.html
     - ls build/web
     - rm -rf build/web/canvaskit
     - cp -r build/web public
+    - mv ./404.html public/
+    - echo -e "<script>(function () {document.write('<base href=\"' + document.location.pathname + '\" />');}());</script>\n$(cat public/index.html)" > public/index.html
     - ls public
   artifacts:
     paths:
