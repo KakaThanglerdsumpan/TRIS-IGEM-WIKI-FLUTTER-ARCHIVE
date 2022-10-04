@@ -1,4 +1,5 @@
 stages:
+  - build
   - deploy
 
 cache:
@@ -12,20 +13,26 @@ before_script:
   - export PATH="$PATH":"$PUB_CACHE/bin"
 
 pages:
-  stage: deploy
+  stage: build
   image: "cirrusci/flutter:latest"
   script:
-    - flutter build web --web-renderer html
-    - echo -e "<script>(function () {document.write('<base href=\"' + document.location.pathname + '\" />');}());</script>\n$(cat build/web/index.html)" > build/web/index.html
-    - ls build/web
-    - rm -rf build/web/canvaskit
-    - cp -r build/web public
-    - cp -r build/web/index.html ./web/404.html
-    - mv ./web/404.html public/
-    - echo -e "<script>(function () {document.write('<base href=\"' + document.location.pathname + '\" />');}());</script>\n$(cat public/index.html)" > public/index.html
+    - bash ./pages/buildEachOne.sh
     - ls public
-  artifacts:
-    paths:
-      - public
   only:
     - main
+
+
+
+pages:
+  stage: build
+  image: python:3.6
+  script:
+  - pip install --no-cache-dir -r ./requirements.txt
+  - FLASK_APP=main.py flask freeze
+  artifacts:
+    paths:
+    - public
+  only:
+  - main
+
+
