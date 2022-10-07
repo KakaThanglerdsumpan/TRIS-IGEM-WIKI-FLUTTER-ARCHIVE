@@ -28,7 +28,11 @@ class HomePage extends StatelessWidget {
                     width: MediaQuery.of(context).size.width,
                     // height: MediaQuery.of(context).size.height - 80,
                     // testest
-                    height: MediaQuery.of(context).size.height - 80,
+                    // height: MediaQuery.of(context).size.height - 80,
+                    height: screenWidth <= 500
+                        ? 125 + 600 + (screenWidth - 670)
+                        : MediaQuery.of(context).size.height - 80,
+
                     decoration: const BoxDecoration(
                         gradient: LinearGradient(
                             begin: Alignment.bottomRight,
@@ -37,7 +41,7 @@ class HomePage extends StatelessWidget {
                   ),
                   Padding(
                     padding: screenWidth < 760
-                        ? EdgeInsets.symmetric(vertical: 50)
+                        ? const EdgeInsets.symmetric(vertical: 50)
                         : const EdgeInsets.symmetric(
                             horizontal: 0, vertical: 50),
                     child: Row(
@@ -212,79 +216,137 @@ class HomePage extends StatelessWidget {
                   ),
                 ],
         ),
-        const SizedBox(height: 30),
+        SizedBox(height: screenWidth <= 500 ? 0 : 30),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(left: 50),
-              child: const SelectableText(
-                'PROMOTIONAL VIDEO',
-                style: TextStyle(
-                    fontFamily: 'rockabye',
-                    fontSize: 40,
-                    color: const Color(0xff34407c)),
-              ),
-            ),
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Stack(children: [
-                  ClipRect(
-                    child: Align(
-                      alignment: Alignment.topRight,
-                      widthFactor: 0.9,
-                      child: SvgPicture.network(
-                        'https://static.igem.wiki/teams/4314/wiki/wiki-element.svg',
-                      ),
-                    ),
-                  ),
+          children: MediaQuery.of(context).size.width < 1250
+              ? [
                   Padding(
-                    padding: const EdgeInsets.only(left: 50),
-                    child: Image.network(
-                      'https://static.igem.wiki/teams/4314/wiki/tmp.png',
+                    padding: EdgeInsets.symmetric(
+                        horizontal: screenWidth < 400 ? 25 : 50),
+                    child: const SelectableText(
+                      'PROMOTIONAL VIDEO',
+                      style: TextStyle(
+                          fontFamily: 'rockabye',
+                          fontSize: 40,
+                          color: const Color(0xff34407c)),
                     ),
                   ),
-                ]),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.end,
+                  MediaQuery.of(context).size.width < 840
+                      ? Padding(
+                          padding: EdgeInsets.symmetric(
+                              horizontal: screenWidth < 400 ? 25 : 50),
+                          child: Image.network(
+                            'https://static.igem.wiki/teams/4314/wiki/tmp.png',
+                          ),
+                        )
+                      : Stack(children: [
+                          ClipRect(
+                            child: Align(
+                              alignment: Alignment.topRight,
+                              widthFactor: 0.9,
+                              child: SvgPicture.network(
+                                'https://static.igem.wiki/teams/4314/wiki/wiki-element.svg',
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.symmetric(
+                                horizontal: screenWidth < 400 ? 25 : 50),
+                            child: Image.network(
+                              'https://static.igem.wiki/teams/4314/wiki/tmp.png',
+                            ),
+                          ),
+                        ]),
+                  Container(
+                    margin: EdgeInsets.symmetric(
+                        horizontal: screenWidth < 400 ? 25 : 50),
+                    width: screenWidth < 400
+                        ? screenWidth - 50
+                        : screenWidth - 100,
+                    child: const SelectableText(
+                      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisis gravida neque convallis a. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper. Faucibus nisl tincidunt eget nullam non nisi est sit. Mattis vulputate enim nulla aliquet.  ',
+                      style: TextStyle(
+                        fontFamily: 'helvetica',
+                        color: Color(0xff34407c),
+                        fontSize: 18,
+                      ),
+                      textAlign: TextAlign.left,
+                    ),
+                  ),
+                ]
+              : [
+                  const Padding(
+                    padding: EdgeInsets.only(left: 50),
+                    child: SelectableText(
+                      'PROMOTIONAL VIDEO',
+                      style: TextStyle(
+                          fontFamily: 'rockabye',
+                          fontSize: 40,
+                          color: Color(0xff34407c)),
+                    ),
+                  ),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Container(
-                        margin: const EdgeInsets.only(right: 50),
-                        width: MediaQuery.of(context).size.width / 4,
-                        child: const SelectableText(
-                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisis gravida neque convallis a. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper. Faucibus nisl tincidunt eget nullam non nisi est sit. Mattis vulputate enim nulla aliquet.  ',
-                          style: TextStyle(
-                            fontFamily: 'helvetica',
-                            color: Color(0xff34407c),
-                            fontSize: 18,
-                          ),
-                          textAlign: TextAlign.right,
-                        ),
-                      ),
-                      SizedBox(
-                        height: 200 +
-                            0.25 * (MediaQuery.of(context).size.width - 1440),
-                      ),
-                      ClipRect(
-                        child: Align(
-                          alignment: Alignment.bottomLeft,
-                          widthFactor: 0.8,
-                          child: SvgPicture.network(
-                            'https://static.igem.wiki/teams/4314/wiki/wiki-element2.svg',
-                            height: 200,
+                      Stack(children: [
+                        ClipRect(
+                          child: Align(
+                            alignment: Alignment.topRight,
+                            widthFactor: 0.9,
+                            child: SvgPicture.network(
+                              'https://static.igem.wiki/teams/4314/wiki/wiki-element.svg',
+                            ),
                           ),
                         ),
-                      ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 50),
+                          child: Image.network(
+                            'https://static.igem.wiki/teams/4314/wiki/tmp.png',
+                          ),
+                        ),
+                      ]),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                              margin: const EdgeInsets.only(right: 50),
+                              width: MediaQuery.of(context).size.width / 4,
+                              child: const SelectableText(
+                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisis gravida neque convallis a. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper. Faucibus nisl tincidunt eget nullam non nisi est sit. Mattis vulputate enim nulla aliquet.  ',
+                                style: TextStyle(
+                                  fontFamily: 'helvetica',
+                                  color: Color(0xff34407c),
+                                  fontSize: 18,
+                                ),
+                                textAlign: TextAlign.right,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 200 +
+                                  0.25 *
+                                      (MediaQuery.of(context).size.width -
+                                          1440),
+                            ),
+                            ClipRect(
+                              child: Align(
+                                alignment: Alignment.bottomLeft,
+                                widthFactor: 0.8,
+                                child: SvgPicture.network(
+                                  'https://static.igem.wiki/teams/4314/wiki/wiki-element2.svg',
+                                  height: 200,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      )
                     ],
                   ),
-                )
-              ],
-            ),
-          ],
+                ],
         ),
         const SizedBox(height: 100),
         const BottomBar(),
