@@ -40,10 +40,9 @@ class HomePage extends StatelessWidget {
                             colors: [Colors.white, Colors.indigo])),
                   ),
                   Padding(
-                    padding: screenWidth < 760
-                        ? const EdgeInsets.symmetric(vertical: 50)
-                        : const EdgeInsets.symmetric(
-                            horizontal: 0, vertical: 50),
+                    padding: screenWidth < 600
+                        ? const EdgeInsets.symmetric(vertical: 30)
+                        : const EdgeInsets.symmetric(vertical: 50),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
