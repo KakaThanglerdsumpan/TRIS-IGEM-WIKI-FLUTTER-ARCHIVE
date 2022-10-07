@@ -29,7 +29,7 @@ class HomePage extends StatelessWidget {
                     // height: MediaQuery.of(context).size.height - 80,
                     // testest
                     // height: MediaQuery.of(context).size.height - 80,
-                    height: screenWidth <= 500
+                    height: screenWidth <= 600
                         ? 125 + 600 + (screenWidth - 670)
                         : MediaQuery.of(context).size.height - 80,
 
@@ -96,9 +96,6 @@ class HomePage extends StatelessWidget {
                             ),
                             child: Image.network(
                                 'https://static.igem.wiki/teams/4314/wiki/igemlogopurple.png'),
-                          ),
-                          const SizedBox(
-                            width: 150,
                           ),
                         ]),
                       ],
@@ -216,7 +213,7 @@ class HomePage extends StatelessWidget {
                   ),
                 ],
         ),
-        SizedBox(height: screenWidth <= 500 ? 0 : 30),
+        SizedBox(height: screenWidth <= 600 ? 0 : 30),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: MediaQuery.of(context).size.width < 1250
