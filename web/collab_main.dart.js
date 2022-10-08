@@ -68834,7 +68834,7 @@ $S:17}
 A.a15.prototype={}
 A.H_.prototype={
 M(a){var s=A.amY(null,"DrukWide",null)
-return new A.wH(A.aM(["/collab",new A.a_P()],t.N,t.Ab),"/collab","Thailand_RIS",s,!1,null)}}
+return new A.wH(A.aM(["/collaborations",new A.a_P()],t.N,t.Ab),"/collaborations","Thailand_RIS",s,!1,null)}}
 A.a_P.prototype={
 $1(a){return B.A9},
 $S:427}

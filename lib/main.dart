@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const HomePage(),
-        '/collab': (context) => const Collab(),
+        '/collaborations': (context) => const Collab(),
         '/modeling': (context) => const Modeling(),
         '/drylabnotebook': (context) => const DrylabNotebook(),
         '/experiments': (context) => const Experiments(),

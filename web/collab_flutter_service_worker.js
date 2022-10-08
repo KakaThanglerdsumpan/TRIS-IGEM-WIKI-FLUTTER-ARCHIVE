@@ -3,36 +3,31 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "collab_version.json": "5c11472afc8e61d3bcbb516e1a243cba",
-"collaborations.html": "d723c8c3bb19e584c5d54ec1e108407c",
-"/": "d723c8c3bb19e584c5d54ec1e108407c",
-"collab_main.dart.js": "6f49acf7c7f50a98d49594328d92d08f",
-"collab_flutter.js": "f85e6fb278b0fd20c349186fb46ae36d",
+  "version.json": "5c11472afc8e61d3bcbb516e1a243cba",
+"index.html": "f0f34d752bd8600d9cd8449e939ef9a7",
+"/": "f0f34d752bd8600d9cd8449e939ef9a7",
+"main.dart.js": "3c8f7d81a840818f1fd200c5a3ccbf05",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"collab_manifest.json": "fae41613b41d07038b829e6b0aec637a",
-"fonts/DrukWide-Bold-Trial.otf": "b8e56636060e6975d7075ac56fbd25ba",
-"fonts/RockabyeRegular-K7Zqy.otf": "61875686db4a882590a588162b409578",
-"assets/AssetManifest.json": "210e0285555f1b34c43168c5fb979afc",
+"manifest.json": "fae41613b41d07038b829e6b0aec637a",
+"assets/AssetManifest.json": "df0e51c85f9fe3f7adaca0fde0729466",
 "assets/NOTICES": "3bbb4316edde3c918014c4ddb983a892",
-"assets/FontManifest.json": "1cb798f884ed916f65f6bb22455bea14",
+"assets/FontManifest.json": "099ff0f34f87b7cb531184fc0f2d7b4f",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
 "assets/shaders/ink_sparkle.frag": "4e32d95d0a674f7325fa84dfc2ef662d",
-"assets/fonts/MaterialIcons-Regular.otf": "95db9098c58fd6db106f1116bae85a0b",
-"canvaskit/canvaskit.js": "2bc454a691c631b07a9307ac4ca47797",
-"canvaskit/profiling/canvaskit.js": "38164e5a72bdad0faa4ce740c9b8e564",
-"canvaskit/profiling/canvaskit.wasm": "95a45378b69e77af5ed2bc72b2209b94",
-"canvaskit/canvaskit.wasm": "bf50631470eb967688cca13ee181af62"
+"assets/fonts/DrukWide-Bold-Trial.otf": "b8e56636060e6975d7075ac56fbd25ba",
+"assets/fonts/RockabyeRegular-K7Zqy.otf": "61875686db4a882590a588162b409578",
+"assets/fonts/MaterialIcons-Regular.otf": "95db9098c58fd6db106f1116bae85a0b"
 };
 
 // The application shell files that are downloaded before a service worker can
 // start.
 const CORE = [
-  "collab_main.dart.js",
-"collaborations.html",
+  "main.dart.js",
+"index.html",
 "assets/AssetManifest.json",
 "assets/FontManifest.json"];
 // During install, the TEMP cache is populated with the application shell files.
