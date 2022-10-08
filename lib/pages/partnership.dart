@@ -5,8 +5,8 @@ import '../modules/headercontainer.dart';
 import '../modules/navigation/sidemenu.dart';
 import '../modules/titlescreen.dart';
 
-class Modeling extends StatelessWidget {
-  const Modeling({Key? key}) : super(key: key);
+class Partnership extends StatelessWidget {
+  const Partnership({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class Modeling extends StatelessWidget {
       body: ListView(children: [
         const TitleScreen(
           ovalMultiplier: 50,
-          pageTitle: 'MODELING',
+          pageTitle: 'PARTNERSHIP',
         ),
         Container(
           margin: MediaQuery.of(context).size.width <= 900

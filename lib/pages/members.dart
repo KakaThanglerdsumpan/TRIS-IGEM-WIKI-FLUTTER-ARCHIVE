@@ -5,8 +5,8 @@ import '../modules/bottombar.dart';
 import '../modules/navigation/sidemenu.dart';
 import '../modules/titlescreen.dart';
 
-class TeamsPage extends StatelessWidget {
-  const TeamsPage({Key? key}) : super(key: key);
+class Members extends StatelessWidget {
+  const Members({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class TeamsPage extends StatelessWidget {
         children: [
           const TitleScreen(
             ovalMultiplier: 35,
-            pageTitle: 'TEAMS',
+            pageTitle: 'MEMBERS',
           ),
           SizedBox(height: MediaQuery.of(context).size.width < 1350 ? 40 : 80),
           MediaQuery.of(context).size.width < 1000

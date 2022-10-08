@@ -5,8 +5,8 @@ import '../modules/headercontainer.dart';
 import '../modules/navigation/sidemenu.dart';
 import '../modules/titlescreen.dart';
 
-class Experiments extends StatelessWidget {
-  const Experiments({Key? key}) : super(key: key);
+class CircularDNA extends StatelessWidget {
+  const CircularDNA({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class Experiments extends StatelessWidget {
       body: ListView(children: [
         const TitleScreen(
           ovalMultiplier: 50,
-          pageTitle: 'EXPERIMENTS',
+          pageTitle: 'CIRCULAR DNA',
         ),
         Container(
           margin: MediaQuery.of(context).size.width <= 900

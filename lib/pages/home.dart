@@ -26,13 +26,9 @@ class HomePage extends StatelessWidget {
               ? [
                   Container(
                     width: MediaQuery.of(context).size.width,
-                    // height: MediaQuery.of(context).size.height - 80,
-                    // testest
-                    // height: MediaQuery.of(context).size.height - 80,
                     height: screenWidth <= 600
                         ? 125 + 600 + (screenWidth - 670)
                         : MediaQuery.of(context).size.height - 80,
-
                     decoration: const BoxDecoration(
                         gradient: LinearGradient(
                             begin: Alignment.bottomRight,
@@ -104,8 +100,6 @@ class HomePage extends StatelessWidget {
               : [
                   Container(
                     width: MediaQuery.of(context).size.width,
-                    // height: MediaQuery.of(context).size.height - 80,
-                    // testest
                     height: MediaQuery.of(context).size.height - 80,
                     decoration: const BoxDecoration(
                         gradient: LinearGradient(
