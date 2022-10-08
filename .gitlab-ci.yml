@@ -16,13 +16,6 @@ pages:
   image: "cirrusci/flutter:latest"
   script:
     - flutter build web --web-renderer html
-    - echo -e <script>(function () {document.write('<base href=\"' + document.location.pathname + '/teams' + '\" />');}());</script>\n$(cat build/web/index.html)" > build/web/index.html
-    - rm -rf build/web/canvaskit
-    - mv index.html teams.html
-    - ls build/web
-    - flutter build web --web-renderer html
-    - echo -e "<script>(function () {document.write('<base href=\"' + document.location.pathname + '\" />');}());</script>\n$(cat build/web/index.html)" > build/web/index.html
-    - ls build/web
     - rm -rf build/web/canvaskit
     - cp -r build/web public
     - ls public
