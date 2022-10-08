@@ -132,13 +132,29 @@ class HomePage extends StatelessWidget {
                                 height: MediaQuery.of(context).size.height / 2 -
                                     100,
                               ),
-                              Container(
-                                height: 300,
-                                width: 200,
-                                alignment: Alignment.centerLeft,
-                                child: Image.network(
-                                    'https://static.igem.wiki/teams/4314/wiki/igemlogopurple-copy.png'),
-                              ),
+                              ClipRect(
+                                child: Align(
+                                  alignment: Alignment.bottomRight,
+                                  widthFactor: 0.8,
+                                  child: Container(
+                                    height: 200 + 10,
+                                    width: 200 + 10,
+                                    decoration: BoxDecoration(
+                                      gradient: LinearGradient(colors: [
+                                        const Color.fromARGB(255, 121, 131, 189)
+                                            .withOpacity(0.3),
+                                        Colors.white.withOpacity(0.3),
+                                      ]),
+                                      shape: BoxShape.circle,
+                                    ),
+                                    alignment: Alignment.center,
+                                    child: Image.network(
+                                        width: 200,
+                                        height: 200,
+                                        'https://static.igem.wiki/teams/4314/wiki/igemlogopurple.png'),
+                                  ),
+                                ),
+                              )
                             ],
                           ),
                           Column(children: [
@@ -177,32 +193,36 @@ class HomePage extends StatelessWidget {
                                   )
                                 ],
                                 shape: BoxShape.circle,
-                                gradient: const LinearGradient(
-                                  begin: Alignment.topLeft,
-                                  end: Alignment.bottomRight,
-                                  colors: [
-                                    Colors.white,
-                                    Colors.indigo,
-                                  ],
-                                ),
                               ),
                               child: Image.network(
                                   'https://static.igem.wiki/teams/4314/wiki/igemlogopurple.png'),
-                            ),
-                            const SizedBox(
-                              width: 150,
                             ),
                           ]),
                           Column(
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
                               const SizedBox(height: 30),
-                              Container(
-                                height: 300,
-                                width: 200,
-                                alignment: Alignment.centerRight,
-                                child: Image.network(
-                                    'https://static.igem.wiki/teams/4314/wiki/igemlogopurple-copy-2.png'),
+                              ClipRect(
+                                child: Align(
+                                  alignment: Alignment.bottomLeft,
+                                  widthFactor: 0.8,
+                                  child: Container(
+                                    height: 220 + 10,
+                                    width: 220 + 10,
+                                    decoration: BoxDecoration(
+                                      gradient: LinearGradient(colors: [
+                                        Colors.white.withOpacity(0.3),
+                                        Colors.indigo.withOpacity(0.3),
+                                      ]),
+                                      shape: BoxShape.circle,
+                                    ),
+                                    alignment: Alignment.center,
+                                    child: Image.network(
+                                        width: 220,
+                                        height: 220,
+                                        'https://static.igem.wiki/teams/4314/wiki/igemlogopurple.png'),
+                                  ),
+                                ),
                               ),
                             ],
                           ),
