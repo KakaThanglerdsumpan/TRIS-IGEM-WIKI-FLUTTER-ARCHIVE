@@ -15,7 +15,7 @@ class NavBarButton extends StatelessWidget {
         pageName.toUpperCase(),
         style: const TextStyle(
           color: Color(0xff303f7b),
-          fontSize: 20,
+          fontSize: 18,
         ),
       ),
     );
@@ -50,13 +50,16 @@ class NavBarDDButton extends StatelessWidget {
               child: subpages),
         ),
       ],
-      child: Text(
-        title.toUpperCase(),
-        style: const TextStyle(
-          color: Color(0xff303f7b),
-          fontSize: 20,
+      child: Row(crossAxisAlignment: CrossAxisAlignment.center, children: [
+        Text(
+          title.toUpperCase(),
+          style: const TextStyle(
+            color: Color(0xff303f7b),
+            fontSize: 18,
+          ),
         ),
-      ),
+        // const Icon(Icons.arrow_drop_down)
+      ]),
     );
   }
 }

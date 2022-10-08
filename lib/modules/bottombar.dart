@@ -17,7 +17,7 @@ class BottomBar extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: const [
                 SelectableText(
-                  'Contact us',
+                  'Contact Us',
                   style: TextStyle(
                     fontSize: 20,
                     fontFamily: 'helvetica',
